@@ -45,12 +45,49 @@ theme:
     - toc.follow
 
 plugins:
+  # რიგი მნიშვნელოვანია: i18n search-ის შემდეგ უნდა იდგეს, რომ ძებნის ინდექსი
+  # თითოეული ენისთვის ცალკე გადააწყოს.
   - search:
       # ქართული lunr-languages-ში არ შედის, ანუ სტემინგი არ მუშაობს:
       # „ბოძი" ვერ იპოვის „ბოძის"-ს. ამიტომ დეფისი და ფრჩხილები გამყოფად
       # ჩავამატე — ასე „{layer}-ში" და „პაჩ-პანელი" მაინც იშლება ნაწილებად,
       # და ლექსიკონი ინგლისურ ტერმინზეა გაღებული, რაც ძებნის რეალური გასაღებია.
       separator: '[\s\-–—,:!=\[\]()"`/]+'
+  - i18n:
+      docs_structure: suffix
+      # ინგლისურ მხარეს ჯერ ყველა გვერდი არ აქვს. fallback ნიშნავს, რომ
+      # უთარგმნელ მისამართზე ქართული გვერდი გაიხსნება და /en/ არ ტყდება.
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ka
+          name: ქართული
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: FiberQ in Georgian
+          site_description: >-
+            Fibre network design in QGIS — study notes, terminology and the
+            Georgian translation of the FiberQ plugin
+          nav_translations:
+            მთავარი: Home
+            ლექსიკონი: Glossary
+            ქსელი: Network
+            არქიტექტურა: Architecture
+            ელემენტები: Elements
+            კაბელები: Cables
+            ინფრასტრუქტურა: Civil works
+            ოპტიკური მარაგი: Optical slack
+            ხელსაწყოთა პანელი: Toolbar
+            ვალიდაცია: Validation
+            მონაცემთა მოდელი: Data model
+            თარგმანი: Translation
+            სამი წესი: The three rules
+            ბატჩები და პროგრესი: Batches and progress
+            ჟურნალი: Journal
 
 markdown_extensions:
   - abbr

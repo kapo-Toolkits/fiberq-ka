@@ -2,9 +2,9 @@
 
 [![deploy docs](https://github.com/kapo-Toolkits/fiberq-ka/actions/workflows/deploy.yml/badge.svg)](https://github.com/kapo-Toolkits/fiberq-ka/actions/workflows/deploy.yml)
 
-**📖 საიტი: <https://kapo-toolkits.github.io/fiberq-ka/>** · **[English](https://kapo-toolkits.github.io/fiberq-ka/en/)**
+**📖 საიტი: <https://fiber.qgis.ge/>** · **[English](https://fiber.qgis.ge/en/)**
 
-საიტი ორენოვანია: ქართული ძირითადია, ინგლისური `/en/`-ზე. ინგლისურად ჯერ მთავარი გვერდი, [ლექსიკონი](https://kapo-toolkits.github.io/fiberq-ka/en/glossary/) და თარგმანის განყოფილებაა — დანარჩენი გვერდები ქართულზე გადამისამართდება (fallback), ანუ არცერთი ბმული არ იტეხება.
+საიტი ორენოვანია: ქართული ძირითადია, ინგლისური `/en/`-ზე. ინგლისურად ჯერ მთავარი გვერდი, [ლექსიკონი](https://fiber.qgis.ge/en/glossary/) და თარგმანის განყოფილებაა — დანარჩენი გვერდები ქართულზე გადამისამართდება (fallback), ანუ არცერთი ბმული არ იტეხება.
 
 [FiberQ](https://github.com/vukovicvl/fiberq)-ის — ოპტიკური ქსელების დაპროექტების QGIS
 პლაგინის — ქართული თარგმანი და სასწავლო ჩანაწერები.

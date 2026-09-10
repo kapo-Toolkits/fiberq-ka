@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{# Material თვითონ მხოლოდ ერთ favicon ბმულს დებს. apple-touch-icon ცალკე სჭირდება, #}
+{# რომ iOS-ზე "Add to Home Screen"-მა სწორი ხატულა აიღოს და არა გვერდის სქრინშოტი. #}
+{# SVG ფავიკონს ეს არ ცვლის — ის დესკტოპის ტაბებში რჩება. #}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon-180.png' | url }}">
+{% endblock %}

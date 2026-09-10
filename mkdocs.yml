@@ -14,8 +14,13 @@ copyright: >
 theme:
   name: material
   language: ka
+  # ლოგო: ერთი ბოჭკო სამად იტოტება — მაგისტრალი / განაწილება / აბონენტი.
+  # ფავიკონი: იგივე ბოჭკო განივკვეთში (გარსი + ბირთვი) — განშტოებული ნიშანი
+  # 16px-ზე ერთ ლაქად ერწყმის, რგოლი კი ნებისმიერ ზომაზე იკითხება.
+  custom_dir: overrides
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   icon:
-    logo: material/transit-connection-variant
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"

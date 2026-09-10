@@ -1,0 +1,120 @@
+site_name: FiberQ ქართულად
+site_description: ოპტიკური ქსელების დაპროექტება QGIS-ში — სასწავლო ჩანაწერები, ტერმინოლოგია და თარგმანი
+site_author: Giorgi Kapanadze
+site_url: https://kapo-toolkits.github.io/fiberq-ka/
+
+repo_url: https://github.com/kapo-Toolkits/fiberq-ka
+repo_name: kapo-Toolkits/fiberq-ka
+edit_uri: edit/main/docs/
+
+copyright: >
+  შიგთავსი — CC BY-SA 4.0 · FiberQ არის
+  <a href="https://github.com/vukovicvl/fiberq">vukovicvl/fiberq</a>, GPL-3.0-or-later
+
+theme:
+  name: material
+  language: ka
+  icon:
+    logo: material/transit-connection-variant
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: მუქ თემაზე გადართვა
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: ღია თემაზე გადართვა
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+plugins:
+  - search:
+      # ქართული lunr-languages-ში არ შედის, ანუ სტემინგი არ მუშაობს:
+      # „ბოძი" ვერ იპოვის „ბოძის"-ს. ამიტომ დეფისი და ფრჩხილები გამყოფად
+      # ჩავამატე — ასე „{layer}-ში" და „პაჩ-პანელი" მაინც იშლება ნაწილებად,
+      # და ლექსიკონი ინგლისურ ტერმინზეა გაღებული, რაც ძებნის რეალური გასაღებია.
+      separator: '[\s\-–—,:!=\[\]()"`/]+'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: ¶
+      toc_depth: 3
+      # ნაგულისხმევი slugify არა-ASCII სათაურებს ყრის და ქართულ სათაურებს
+      # ცარიელ id-ებად აქცევს (_1, _2 …). uslugify იუნიკოდს ინარჩუნებს.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ezdanapak
+    - icon: material/puzzle
+      link: https://github.com/vukovicvl/fiberq
+      name: FiberQ upstream
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - მთავარი: index.md
+  - ლექსიკონი: glossary.md
+  - ქსელი:
+      - network/index.md
+      - არქიტექტურა: network/architecture.md
+      - ელემენტები: network/elements.md
+      - კაბელები: network/cables.md
+      - ინფრასტრუქტურა: network/civil.md
+      - ოპტიკური მარაგი: network/slack.md
+  - FiberQ:
+      - fiberq/index.md
+      - ხელსაწყოთა პანელი: fiberq/toolbar.md
+      - ვალიდაცია: fiberq/validation.md
+      - მონაცემთა მოდელი: fiberq/data-model.md
+  - თარგმანი:
+      - translation/index.md
+      - სამი წესი: translation/rules.md
+      - ბატჩები და პროგრესი: translation/batches.md
+  - ჟურნალი: journal.md

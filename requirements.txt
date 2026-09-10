@@ -1,0 +1,3 @@
+# საიტის ასაწყობად:  pip install -r requirements.txt
+# ლოკალურად სანახავად: mkdocs serve
+mkdocs-material>=9.5,<10

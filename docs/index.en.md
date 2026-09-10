@@ -11,13 +11,13 @@ one button at a time.
     [open an issue](https://github.com/kapo-Toolkits/fiberq-ka/issues) or edit the page.
 
 !!! note "About this English edition"
-    Georgian is the primary language of this site. Pages that do not have an English
-    version yet fall back to the Georgian text, so nothing 404s — you will simply land on
-    a Georgian page. Fully translated so far: this page, the
-    [glossary](glossary.md) and the [translation project](translation/index.md).
+    Georgian is the primary language of this site; every page is also available in English.
+    Where a page has no English version yet, it falls back to the Georgian text rather than
+    404ing.
 
-    The glossary is the page most likely to be useful to an English reader: it is the
-    English → Georgian terminology reference prepared for the FiberQ catalogue.
+    The page most likely to be useful to an English reader is the
+    [glossary](glossary.md) — the English → Georgian terminology reference prepared for the
+    FiberQ catalogue, and the thing this whole site was built around.
 
 ---
 
